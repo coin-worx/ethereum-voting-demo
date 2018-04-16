@@ -7,6 +7,16 @@
  2. sudo add-apt-repository -y ppa:ethereum/ethereum
  3. sudo apt-get update
  4. sudo apt-get install ethereum
+ 
+## Install Solidity
+
+ 1. sudo add-apt-repository ppa:ethereum/ethereum
+ 2. sudo apt-get update
+ 3. sudo apt-get install solc
+ 
+### npm / Node.js
+
+npm install -g solc
 
 ### Command to run the testnet
 
@@ -58,13 +68,13 @@ If you are successfull in doing all above, then run below command to test the co
 
     npm run dev
 
-## Some useful commands
+## Some useful commands:
 1. Get all accounts created
 	> web3.eth.accounts
 2. Get balance of your account
 	> web3.eth.getBalance('web3.eth.accounts[0]')
 
-## Note
+## Note:
 1.  if already in ***truffle console*** then just run ***compile*** and ***migrate*** instead of ***truffle compile*** and ***truffle migrate***
 
 2. if faced with 
