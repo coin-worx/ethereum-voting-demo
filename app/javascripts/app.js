@@ -26,6 +26,7 @@ let tokenPrice = null;
 window.voteForCandidate = function(candidate) {
   let candidateName = $("#candidate").val();
   let voteTokens = $("#vote-tokens").val();
+  let address = $("#voter-address").val();
   $("#msg").html("Vote has been submitted. The vote count will increment as soon as the vote is recorded on the blockchain. Please wait.")
   $("#candidate").val("");
   $("#vote-tokens").val("");
@@ -35,7 +36,7 @@ window.voteForCandidate = function(candidate) {
    * everywhere we have a transaction call
    */
   Voting.deployed().then(function(contractInstance) {
-    contractInstance.voteForCandidate(candidateName, voteTokens, {gas: 140000, from: web3.eth.accounts[0]}).then(function() {
+    contractInstance.voteForCandidate(candidateName, voteTokens, {gas: 140000, from: address}).then(function() {
       let div_id = candidates[candidateName];
       return contractInstance.totalVotesFor.call(candidateName).then(function(v) {
         $("#" + div_id).html(v.toString());
@@ -52,10 +53,11 @@ window.voteForCandidate = function(candidate) {
 
 window.buyTokens = function() {
   let tokensToBuy = $("#buy").val();
+  let address = $("#buyer-address").val();
   let price = tokensToBuy * tokenPrice;
   $("#buy-msg").html("Purchase order has been submitted. Please wait.");
   Voting.deployed().then(function(contractInstance) {
-    contractInstance.buy({value: web3.toWei(price, 'ether'), from: web3.eth.accounts[0]}).then(function(v) {
+    contractInstance.buy({value: web3.toWei(price, 'ether'), from: address}).then(function(v) {
       $("#buy-msg").html("");
       web3.eth.getBalance(contractInstance.address, function(error, result) {
         $("#contract-balance").html(web3.fromWei(result.toString()) + " Ether");

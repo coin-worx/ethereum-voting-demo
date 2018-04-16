@@ -1,8 +1,10 @@
-pragma solidity ^0.4.16;
+pragma solidity ^0.4.21;
 // We have to specify what version of compiler this code will compile with
 
+import "./Ownable.sol";
 
-contract Voting {
+
+contract Voting is Ownable {
 
     // We use the struct datatype to store the voter information.
     struct Voter {
@@ -126,7 +128,7 @@ contract Voting {
     this method and transfer the balance in to their account. In reality, you should add
     check to make sure only the owner of this contract can cash out.
     */
-    function transferTo(address account) public {
+    function transferTo(address account) public onlyOwner {
         address myAddress = this;
         account.transfer(myAddress.balance);
     }

@@ -35,6 +35,9 @@
       <input type="text" id="vote-tokens" placeholder="Total no. of tokens to vote"/>
       <br>
       <br>
+      <input type="text" id="voter-address" placeholder="Voter Address"/>
+      <br>
+      <br>
       <a href="#" onclick="voteForCandidate()" class="btn btn-primary">Vote</a>
     </div>
   </div>
@@ -67,6 +70,11 @@
       <div class="col-sm-12">
         <div id="buy-msg"></div>
         <input type="text" id="buy" class="col-sm-8" placeholder="Number of tokens to buy"/>&nbsp;
+        <br>
+        <br>
+        <input type="text" id="buyer-address" class="col-sm-8" placeholder="Buyer Address"/>&nbsp;
+        <br>
+        <br>
         <a href="#" onclick="buyTokens()" class="btn btn-primary">Buy</a>
       </div>
     </div>
@@ -74,6 +82,8 @@
       <h2>Lookup Voter Info</h2>
       <div class="col-sm-12">
         <input type="text" id="voter-info", class="col-sm-8" placeholder="Enter the voter address" />&nbsp;
+        <br>
+        <br>
         <a href="#" onclick="lookupVoterInfo()" class="btn btn-primary">Lookup</a>
         <div class="voter-details row text-left">
           <div id="tokens-bought" class="margin-top-3 col-md-12"></div>

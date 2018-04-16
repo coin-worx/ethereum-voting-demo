@@ -51,6 +51,8 @@ Below are some sample commands to get you started
 
 > Voting.deployed().then(function(contractInstance) {contractInstance.transferTo(web3.eth.accounts[0]).then(function(v) {console.log(v)})})
 
+> Voting.deployed().then(function(contractInstance) {contractInstance.transferOwnership(web3.eth.accounts[1]).then(function(v) {console.log(v)})})
+
 ## Test from browser
 If you are successfull in doing all above, then run below command to test the code on web browser
 
