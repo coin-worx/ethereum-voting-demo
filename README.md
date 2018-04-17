@@ -72,7 +72,7 @@ If you are successfull in doing all above, then run below command to test the co
 1. Get all accounts created
 	> web3.eth.accounts
 2. Get balance of your account
-	> web3.eth.getBalance('web3.eth.accounts[0]')
+	> web3.eth.getBalance(web3.eth.accounts[0])
 
 ## Note:
 1.  if already in ***truffle console*** then just run ***compile*** and ***migrate*** instead of ***truffle compile*** and ***truffle migrate***
