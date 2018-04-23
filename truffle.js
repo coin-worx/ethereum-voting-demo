@@ -20,6 +20,9 @@ module.exports = {
       port: 8545,
       gas: 4700000,
       network_id: '5' // Match any network id
+    },
+    mocha: {
+      enableTimeouts: false
     }
   }
 }

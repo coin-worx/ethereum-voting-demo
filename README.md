@@ -38,6 +38,7 @@ Run below commands in directory where smart contract code is placed.
  4. Go to [this](https://faucet.rinkeby.io/) url and follow the instructions to generate fake ether for your account.
  5. truffle compile
  6. truffle migrate
+ 7. In ***truffle console*** run ***test*** for running test cases
 
 ## Test the contract in test network
 Run `truffle console` and start testing your voting demo smart ccontract

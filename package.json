@@ -5,7 +5,10 @@
   "scripts": {
     "lint": "eslint ./",
     "build": "webpack",
-    "dev": "webpack-dev-server"
+    "dev": "webpack-dev-server",
+    "start": "SET NODE_ENV=dev && node ./bin/www",
+    "devstart": "SET NODE_ENV=dev && nodemon ./bin/www",
+    "test": "mocha --timeout 1200000"
   },
   "author": "Douglas von Kohorn",
   "license": "MIT",

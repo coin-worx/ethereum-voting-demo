@@ -52,7 +52,16 @@ contract Voting is Ownable {
     function. Accepting money can not get any easier than this!
     */
     function buy() public payable returns (uint) {
+        log2(
+            bytes32(keccak256(msg.value)),
+            bytes32(msg.sender),
+            bytes32(keccak256(tokenPrice))
+        );
         uint tokensToBuy = msg.value / tokenPrice;
+        log1(
+            bytes32(tokensToBuy),
+            bytes32(balanceTokens)
+        );
         require(tokensToBuy <= balanceTokens);
         voterInfo[msg.sender].voterAddress = msg.sender;
         voterInfo[msg.sender].tokensBought += tokensToBuy;
@@ -135,6 +144,13 @@ contract Voting is Ownable {
 
     function allCandidates() public view returns (bytes32[]) {
         return candidateList;
+    }
+
+    // Function to get candidateList outside of contract since EVM does not allow dynamic sized return type yet.
+    function getFixedSizeAllCandidatesArray() public view returns (bytes32[3] array) {
+        for (uint i = 0; i < candidateList.length; ++i) {
+            array[i] = candidateList[i];
+        }
     }
 
     // Return the sum of all the tokens used by this voter.

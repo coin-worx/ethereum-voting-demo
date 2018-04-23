@@ -225,7 +225,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 504,
+                        "referencedDeclaration": 560,
                         "src": "521:3:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -314,7 +314,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 504,
+                            "referencedDeclaration": 560,
                             "src": "663:3:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -368,7 +368,7 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 507,
+                      "referencedDeclaration": 563,
                       "src": "655:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -523,7 +523,7 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 507,
+                      "referencedDeclaration": 563,
                       "src": "941:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -914,7 +914,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 504,
+                        "referencedDeclaration": 560,
                         "src": "521:3:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -1003,7 +1003,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 504,
+                            "referencedDeclaration": 560,
                             "src": "663:3:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -1057,7 +1057,7 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 507,
+                      "referencedDeclaration": 563,
                       "src": "655:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1212,7 +1212,7 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 507,
+                      "referencedDeclaration": 563,
                       "src": "941:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1445,10 +1445,10 @@
     "4": {
       "events": {},
       "links": {},
-      "address": "0x37ae6dd815e428c1b1cea8c3456f48615584e099",
-      "transactionHash": "0x9ec080330c8b1ad4f1ad4bdbd46b7b76ebb1833268890ae19057b0922348453b"
+      "address": "0x2a3bf454bb4ca71bcfcdbc5df01af69977d139ac",
+      "transactionHash": "0x8cc5ab39b4c3ea9d4288a8113abcc2144c41f9d7a0d74b0975dac5c316a752e1"
     }
   },
   "schemaVersion": "2.0.0",
-  "updatedAt": "2018-04-16T12:55:07.112Z"
+  "updatedAt": "2018-04-23T15:48:38.737Z"
 }
