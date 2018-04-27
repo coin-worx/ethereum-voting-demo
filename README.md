@@ -16,7 +16,7 @@
  
 ### npm / Node.js
 
-npm install -g solc
+> npm install -g solc
 
 ### Command to run the testnet
 
@@ -24,7 +24,7 @@ npm install -g solc
 
 
 ## Install the Truffle Framework
-npm install -g truffle
+> npm install -g truffle
 
 ### Set up the voting contract
  1. npm install -g webpack
@@ -32,36 +32,52 @@ npm install -g truffle
 
 ## Deploy the contract to Rinkeby test network
 Run below commands in directory where smart contract code is placed. 
- 1. truffle console
- 2. web3.personal.newAccount('verystrongpassword')
- 3. web3.personal.unlockAccount('0x95a94979d86d9c32d1d2ab5ace2dcc8d1b446fa1', 'verystrongpassword', 15000) ***you  should provide your account address to unlock***
+ 1. View truffle console
+ 	> truffle console
+ 2. Command to create a new account in **truffle console**
+    > web3.personal.newAccount('verystrongpassword')
+ 3. By defualt, accounts are locked. To use the account you have to unlock it first y running below command in **truffle console**.
+ 	> web3.personal.unlockAccount('0x95a94979d86d9c32d1d2ab5ace2dcc8d1b446fa1', 'verystrongpassword', 15000) 
  4. Go to [this](https://faucet.rinkeby.io/) url and follow the instructions to generate fake ether for your account.
- 5. truffle compile
- 6. truffle migrate
- 7. In ***truffle console*** run ***test*** for running test cases
+ 5. Command to compile the smart contract
+ 	> truffle compile
+ 6. Command to deploy the smart contract
+ 	> truffle migrate
+ 7. In **truffle console** run below command for running test cases
+	> test
 
 ## Test the contract in test network
 Run `truffle console` and start testing your voting demo smart ccontract
 Below are some sample commands to get you started
 
+Command to see total tokens available for sale
 > Voting.deployed().then(function(contractInstance) {contractInstance.getTotalTokens().then(function(v) {console.log(v)})})
 
+Command to see all candidates
 > Voting.deployed().then(function(contractInstance) {contractInstance.allCandidates().then(function(v) {console.log(v)})})
 
+Command to buy tokens worth 1 ether (eg. 10 tokens)
 > Voting.deployed().then(function(contract) {contract.buy({value: web3.toWei('1', 'ether'), from: web3.eth.accounts[0]}).then(function(v) {console.log(v)})})
 
+Command to see how many tokens has been sold
 > Voting.deployed().then(function(contract) {contract.tokensSold().then(function(v) {console.log(v)})})
 
+Command to cast 5 votes for candidate 'Rama'
 > Voting.deployed().then(function(contract) {contract.voteForCandidate('Rama', 5).then(function(v) {console.log(v)})})
 
+Command to cast 5 votes for candidate 'Rama' from account other then default account
 > Voting.deployed().then(function(contract) {contract.voteForCandidate('Rama', 5, {from: web3.eth.accounts[1]}).then(function(v) {console.log(v)})})
 
+Command to see total votes for candidate 'Rama'
 > Voting.deployed().then(function(contractInstance) {contractInstance.totalVotesFor.call('Rama').then(function(v) {console.log(v)})})
 
+Command to see voter details
 > Voting.deployed().then(function(contractInstance) {contractInstance.voterDetails(web3.eth.accounts[0]).then(function(v) {console.log(v)})})
 
+Command to transfer voter contracts balance to owner
 > Voting.deployed().then(function(contractInstance) {contractInstance.transferTo(web3.eth.accounts[0]).then(function(v) {console.log(v)})})
 
+Command to transfer ownership of contract to some one else
 > Voting.deployed().then(function(contractInstance) {contractInstance.transferOwnership(web3.eth.accounts[1]).then(function(v) {console.log(v)})})
 
 ## Test from browser
