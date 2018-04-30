@@ -1,0 +1,8 @@
+# Compiled source #
+###################
+build/
+node_modules/
+
+# Compiler generated files #
+######################
+.vscode/

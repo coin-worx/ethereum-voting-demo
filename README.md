@@ -1,5 +1,12 @@
 
 # ethereum-voting-demo
+This application is an implementation of blog post [part1](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-1-40d2d0d807c2), [part2](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-2-30b3d335aa1f) and [part3](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-3-331c2712c9df)
+
+This is a voting application to vote 3 candidates. Any user can vote these (*Rama, Nick, Jose*) 3 candidates a number of times but total number of votes that a user can cast is dependent on tokens bought. And user can buy tokens using Etherium coin (*if using testnet then fake ether*). Price for one token is .1 ether.
+
+Only the owner of contract can then transfer the smart contract ether (*used to buy tokens*) to his/her own account or anyone else's as well. The owner can transfer the ownership of smart contract to someone else as well.
+ 
+This application can be accessed from both **web user interface** and **command line interface**
 
 ## Install geth and sync the blockchain
 
@@ -7,13 +14,13 @@
  2. sudo add-apt-repository -y ppa:ethereum/ethereum
  3. sudo apt-get update
  4. sudo apt-get install ethereum
- 
+
 ## Install Solidity
 
  1. sudo add-apt-repository ppa:ethereum/ethereum
  2. sudo apt-get update
  3. sudo apt-get install solc
- 
+
 ### npm / Node.js
 
 > npm install -g solc
@@ -94,14 +101,14 @@ If you are successfull in doing all above, then run below command to test the co
 ## Note:
 1.  if already in ***truffle console*** then just run ***compile*** and ***migrate*** instead of ***truffle compile*** and ***truffle migrate***
 
-2. if faced with 
+2. if faced with
 	> authentication needed: password or unlock
-	
+
 	make sure that you are using the first account provided by geth and it is 					unlocked as well. Run web3.eth.accounts command and make sure you are using the first account.
 
-3. if faced with 
+3. if faced with
 	> UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 2): Error: invalid address
-	
+
 	Make sure that default account is first account provided by geth. Run web3.eth.defaultAccount = web3.eth.accounts[0] command to do that.
 
 6. If facing issues during redeployment of smart contract. Make a backup of ***build*** folder and delete the original ***build*** folder from smart contract directory. Then again run the ***compile*** and ***migrate*** command.
