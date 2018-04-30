@@ -1,12 +1,13 @@
 
 # ethereum-voting-demo
-This application is an implementation of blog post [part1](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-1-40d2d0d807c2), [part2](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-2-30b3d335aa1f) and [part3](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-3-331c2712c9df)
 
 This is a voting application to vote 3 candidates. Any user can vote these (*Rama, Nick, Jose*) 3 candidates a number of times but total number of votes that a user can cast is dependent on tokens bought. And user can buy tokens using Etherium coin (*if using testnet then fake ether*). Price for one token is .1 ether.
 
 Only the owner of contract can then transfer the smart contract ether (*used to buy tokens*) to his/her own account or anyone else's as well. The owner can transfer the ownership of smart contract to someone else as well.
  
 This application can be accessed from both **web user interface** and **command line interface**
+
+This application is an implementation of blog posts [part1](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-1-40d2d0d807c2), [part2](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-2-30b3d335aa1f) and [part3](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-3-331c2712c9df)
 
 ## Install geth and sync the blockchain
 
