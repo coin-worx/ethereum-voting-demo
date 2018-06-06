@@ -9,6 +9,13 @@ This application can be accessed from both **web user interface** and **command 
 
 This application is an implementation of blog posts [part1](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-1-40d2d0d807c2), [part2](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-2-30b3d335aa1f) and [part3](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-3-331c2712c9df), with a few enhancements on top.
 
+Enhancements include:
+ - Modified [Ownable](https://github.com/OpenZeppelin/openzeppelin-solidity/blob/master/contracts/ownership/Ownable.sol) smart contract to enforce the ownership of smart contract.
+ - Balance Transfer restriction. Only owner can transfer balance.
+ - Ownership transfer. Owner can transfer ownership to someone else.
+ - Minor UI updates to better portray the remaining tokens.
+ - Added textfields to take the account of voter instead of using default account.
+
 ## Install geth and sync the blockchain
 
  1. sudo apt-get install software-properties-common
